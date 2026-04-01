@@ -1,0 +1,4 @@
+/home/pcsdocker/Data/PCS.322543/esercitazione3/build/CMakeFiles/es3.dir
+/home/pcsdocker/Data/PCS.322543/esercitazione3/build/CMakeFiles/rational.dir
+/home/pcsdocker/Data/PCS.322543/esercitazione3/build/CMakeFiles/edit_cache.dir
+/home/pcsdocker/Data/PCS.322543/esercitazione3/build/CMakeFiles/rebuild_cache.dir
