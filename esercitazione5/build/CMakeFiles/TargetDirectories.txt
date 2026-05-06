@@ -1,0 +1,9 @@
+/home/pcsdocker/Data/PCS.322543/esercitazione5/build/CMakeFiles/measure_sorts.dir
+/home/pcsdocker/Data/PCS.322543/esercitazione5/build/CMakeFiles/test_bubble_sort.dir
+/home/pcsdocker/Data/PCS.322543/esercitazione5/build/CMakeFiles/test_insertion_sort.dir
+/home/pcsdocker/Data/PCS.322543/esercitazione5/build/CMakeFiles/test_selection_sort.dir
+/home/pcsdocker/Data/PCS.322543/esercitazione5/build/CMakeFiles/test_merge_sort.dir
+/home/pcsdocker/Data/PCS.322543/esercitazione5/build/CMakeFiles/test_quick_sort.dir
+/home/pcsdocker/Data/PCS.322543/esercitazione5/build/CMakeFiles/test.dir
+/home/pcsdocker/Data/PCS.322543/esercitazione5/build/CMakeFiles/edit_cache.dir
+/home/pcsdocker/Data/PCS.322543/esercitazione5/build/CMakeFiles/rebuild_cache.dir

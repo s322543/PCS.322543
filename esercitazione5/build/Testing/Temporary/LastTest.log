@@ -1,0 +1,78 @@
+Start testing: Apr 30 17:30 UTC
+----------------------------------------------------------
+1/5 Testing: bubble_sort
+1/5 Test: bubble_sort
+Command: "/home/pcsdocker/Data/PCS.322543/esercitazione5/build/test_bubble_sort"
+Directory: /home/pcsdocker/Data/PCS.322543/esercitazione5/build
+"bubble_sort" start time: Apr 30 17:30 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"bubble_sort" end time: Apr 30 17:30 UTC
+"bubble_sort" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: insertion_sort
+2/5 Test: insertion_sort
+Command: "/home/pcsdocker/Data/PCS.322543/esercitazione5/build/test_insertion_sort"
+Directory: /home/pcsdocker/Data/PCS.322543/esercitazione5/build
+"insertion_sort" start time: Apr 30 17:30 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"insertion_sort" end time: Apr 30 17:30 UTC
+"insertion_sort" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: selection_sort
+3/5 Test: selection_sort
+Command: "/home/pcsdocker/Data/PCS.322543/esercitazione5/build/test_selection_sort"
+Directory: /home/pcsdocker/Data/PCS.322543/esercitazione5/build
+"selection_sort" start time: Apr 30 17:30 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"selection_sort" end time: Apr 30 17:30 UTC
+"selection_sort" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: merge_sort
+4/5 Test: merge_sort
+Command: "/home/pcsdocker/Data/PCS.322543/esercitazione5/build/test_merge_sort"
+Directory: /home/pcsdocker/Data/PCS.322543/esercitazione5/build
+"merge_sort" start time: Apr 30 17:30 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"merge_sort" end time: Apr 30 17:30 UTC
+"merge_sort" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: quick_sort
+5/5 Test: quick_sort
+Command: "/home/pcsdocker/Data/PCS.322543/esercitazione5/build/test_quick_sort"
+Directory: /home/pcsdocker/Data/PCS.322543/esercitazione5/build
+"quick_sort" start time: Apr 30 17:30 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"quick_sort" end time: Apr 30 17:30 UTC
+"quick_sort" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 30 17:30 UTC

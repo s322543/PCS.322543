@@ -1,0 +1,943 @@
+confrontando gli algoritmi quadratici e quelli logaritmici noto che esiste un valore soglia dove i primi performano meglio dei secondi, in particolare, noto, facendo più stampe al terminale che questa soglia cambia di volta in volta, rimanendo in un range di 5-30, il che è coerente con la teoria, infatti, per n, cioè per vettori di dimensioni piccole, il quick sort e il merge sort, pur essendo logaritmici, questo perché hanno un costo di gestione della memoria maggiore dovuto alla locazione di dati e alle chiamate ricorsive  in memoria.
+quindi per dimensioni piccole vince l'insertion sort. 
+
+Osservo dai dati, che il merge sort è il più lento sempre, perché testo su un set di dati di arrey di dimensione inferiore a 100, ancora troppo piccole per vedere una "vincita" del merge sort sugli altri algoritmi. 
+
+Dai dati si vede che sulla complessità computazionale incide anche la natura dei vettori su cui gli algoritmi lavorano, infatti, i vettori su cui vado ad applicare i vari sorts vengono creati randomicamente e questa casualità influisce sulla velocità dei sorts, infatti anche per dimensione "alte" trovo che insertion sort "vince" sul quick sort.
+
+In fine, il quick modificato è quasi sempre il migliore perché per dimensioni "piccole", quindi per dimensioni inferiori al una soglia (soglia scelta nel mio caso 16) implementa l'insertion che è il più veloce tra gli algoritmi quadratici, e si comporta come il quick sort normale per dimensioni superiori alla stessa soglia.  
+
+
+
+
+In seguito un esempio di stampa al terminale del measure_sorts 
+
+dimensione:2
+tempo medio bubble_sort: 5.177e-08
+tempo medio insertion_sort: 4.614e-08
+tempo medio selection_sort: 5.439e-08
+tempo medio merge_sort: 3.1702e-07
+tempo medio quick_sort: 6.955e-08
+tempo medio std::sort: 1.9717e-07
+tempo medio quick_modificato 5.19e-08
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 2
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 2
+dimensione:3
+tempo medio bubble_sort: 1.034e-07
+tempo medio insertion_sort: 1.0397e-07
+tempo medio selection_sort: 1.1135e-07
+tempo medio merge_sort: 6.456e-07
+tempo medio quick_sort: 1.2828e-07
+tempo medio std::sort: 2.7067e-07
+tempo medio quick_modificato 1.035e-07
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 3
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 3
+dimensione:4
+tempo medio bubble_sort: 4.8708e-07
+tempo medio insertion_sort: 1.6781e-07
+tempo medio selection_sort: 1.835e-07
+tempo medio merge_sort: 9.8329e-07
+tempo medio quick_sort: 2.063e-07
+tempo medio std::sort: 3.7545e-07
+tempo medio quick_modificato 1.7374e-07
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 4
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 4
+dimensione:5
+tempo medio bubble_sort: 3.7077e-07
+tempo medio insertion_sort: 2.1628e-07
+tempo medio selection_sort: 3.036e-07
+tempo medio merge_sort: 1.44115e-06
+tempo medio quick_sort: 5.6666e-07
+tempo medio std::sort: 7.7792e-07
+tempo medio quick_modificato 2.4037e-07
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 5
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 5
+dimensione:6
+tempo medio bubble_sort: 5.5245e-07
+tempo medio insertion_sort: 2.9444e-07
+tempo medio selection_sort: 4.3752e-07
+tempo medio merge_sort: 1.71335e-06
+tempo medio quick_sort: 4.0913e-07
+tempo medio std::sort: 5.7692e-07
+tempo medio quick_modificato 2.9393e-07
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 6
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 6
+dimensione:7
+tempo medio bubble_sort: 7.5248e-07
+tempo medio insertion_sort: 3.7713e-07
+tempo medio selection_sort: 5.2142e-07
+tempo medio merge_sort: 2.11973e-06
+tempo medio quick_sort: 4.9634e-07
+tempo medio std::sort: 6.9253e-07
+tempo medio quick_modificato 3.6509e-07
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 7
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 7
+dimensione:8
+tempo medio bubble_sort: 9.3438e-07
+tempo medio insertion_sort: 4.5414e-07
+tempo medio selection_sort: 6.6494e-07
+tempo medio merge_sort: 2.6872e-06
+tempo medio quick_sort: 6.0696e-07
+tempo medio std::sort: 8.2139e-07
+tempo medio quick_modificato 4.805e-07
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 8
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 8
+dimensione:9
+tempo medio bubble_sort: 1.65208e-06
+tempo medio insertion_sort: 5.5489e-07
+tempo medio selection_sort: 8.5289e-07
+tempo medio merge_sort: 2.91762e-06
+tempo medio quick_sort: 7.3381e-07
+tempo medio std::sort: 9.7523e-07
+tempo medio quick_modificato 5.7783e-07
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 9
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 9
+dimensione:10
+tempo medio bubble_sort: 1.30605e-06
+tempo medio insertion_sort: 6.2212e-07
+tempo medio selection_sort: 1.00872e-06
+tempo medio merge_sort: 3.21363e-06
+tempo medio quick_sort: 8.2031e-07
+tempo medio std::sort: 1.28711e-06
+tempo medio quick_modificato 8.0952e-07
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 10
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 10
+dimensione:11
+tempo medio bubble_sort: 1.47956e-06
+tempo medio insertion_sort: 6.8618e-07
+tempo medio selection_sort: 1.13022e-06
+tempo medio merge_sort: 3.78537e-06
+tempo medio quick_sort: 1.03107e-06
+tempo medio std::sort: 1.09202e-06
+tempo medio quick_modificato 8.3552e-07
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 11
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 11
+dimensione:12
+tempo medio bubble_sort: 1.75205e-06
+tempo medio insertion_sort: 6.8747e-07
+tempo medio selection_sort: 4.26449e-06
+tempo medio merge_sort: 5.26413e-06
+tempo medio quick_sort: 9.4999e-07
+tempo medio std::sort: 1.54295e-06
+tempo medio quick_modificato 1.13049e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 12
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 12
+dimensione:13
+tempo medio bubble_sort: 2.44178e-06
+tempo medio insertion_sort: 7.7706e-07
+tempo medio selection_sort: 1.4477e-06
+tempo medio merge_sort: 6.07536e-06
+tempo medio quick_sort: 1.34753e-06
+tempo medio std::sort: 1.50967e-06
+tempo medio quick_modificato 1.06809e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 13
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 13
+dimensione:14
+tempo medio bubble_sort: 2.31334e-06
+tempo medio insertion_sort: 8.6087e-07
+tempo medio selection_sort: 3.03835e-06
+tempo medio merge_sort: 5.73116e-06
+tempo medio quick_sort: 1.12202e-06
+tempo medio std::sort: 1.93111e-06
+tempo medio quick_modificato 1.18783e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 14
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 14
+dimensione:15
+tempo medio bubble_sort: 2.7404e-06
+tempo medio insertion_sort: 9.3805e-07
+tempo medio selection_sort: 2.1751e-06
+tempo medio merge_sort: 5.2237e-06
+tempo medio quick_sort: 1.27406e-06
+tempo medio std::sort: 1.60795e-06
+tempo medio quick_modificato 1.27535e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 15
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 15
+dimensione:16
+tempo medio bubble_sort: 3.33846e-06
+tempo medio insertion_sort: 2.34171e-06
+tempo medio selection_sort: 1.9651e-06
+tempo medio merge_sort: 6.99147e-06
+tempo medio quick_sort: 1.72006e-06
+tempo medio std::sort: 2.66933e-06
+tempo medio quick_modificato 1.48346e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 16
+dimensione:17
+tempo medio bubble_sort: 3.27093e-06
+tempo medio insertion_sort: 1.13502e-06
+tempo medio selection_sort: 2.36505e-06
+tempo medio merge_sort: 5.73558e-06
+tempo medio quick_sort: 1.51337e-06
+tempo medio std::sort: 2.28538e-06
+tempo medio quick_modificato 1.47129e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 17
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 17
+dimensione:18
+tempo medio bubble_sort: 3.47623e-06
+tempo medio insertion_sort: 1.45593e-06
+tempo medio selection_sort: 2.59055e-06
+tempo medio merge_sort: 5.92904e-06
+tempo medio quick_sort: 1.67401e-06
+tempo medio std::sort: 2.47649e-06
+tempo medio quick_modificato 1.59846e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 18
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 18
+dimensione:19
+tempo medio bubble_sort: 3.96784e-06
+tempo medio insertion_sort: 1.42076e-06
+tempo medio selection_sort: 2.87942e-06
+tempo medio merge_sort: 5.50663e-06
+tempo medio quick_sort: 1.501e-06
+tempo medio std::sort: 2.3454e-06
+tempo medio quick_modificato 1.50818e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 19
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 19
+dimensione:20
+tempo medio bubble_sort: 3.69684e-06
+tempo medio insertion_sort: 1.21286e-06
+tempo medio selection_sort: 2.4431e-06
+tempo medio merge_sort: 5.13452e-06
+tempo medio quick_sort: 1.39198e-06
+tempo medio std::sort: 2.04204e-06
+tempo medio quick_modificato 1.32112e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 20
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 20
+dimensione:21
+tempo medio bubble_sort: 3.41753e-06
+tempo medio insertion_sort: 1.06907e-06
+tempo medio selection_sort: 2.24633e-06
+tempo medio merge_sort: 7.15797e-06
+tempo medio quick_sort: 2.90544e-06
+tempo medio std::sort: 3.61947e-06
+tempo medio quick_modificato 2.72786e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 21
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 21
+dimensione:22
+tempo medio bubble_sort: 3.40838e-06
+tempo medio insertion_sort: 1.74691e-06
+tempo medio selection_sort: 2.02857e-06
+tempo medio merge_sort: 5.30731e-06
+tempo medio quick_sort: 1.35362e-06
+tempo medio std::sort: 2.0273e-06
+tempo medio quick_modificato 1.2215e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 22
+dimensione:23
+tempo medio bubble_sort: 3.84096e-06
+tempo medio insertion_sort: 1.09669e-06
+tempo medio selection_sort: 2.7229e-06
+tempo medio merge_sort: 5.31493e-06
+tempo medio quick_sort: 1.36195e-06
+tempo medio std::sort: 2.03381e-06
+tempo medio quick_modificato 1.34356e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 23
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 23
+dimensione:24
+tempo medio bubble_sort: 3.59841e-06
+tempo medio insertion_sort: 1.27149e-06
+tempo medio selection_sort: 2.34392e-06
+tempo medio merge_sort: 4.53091e-06
+tempo medio quick_sort: 1.29554e-06
+tempo medio std::sort: 1.97386e-06
+tempo medio quick_modificato 1.31808e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 24
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 24
+dimensione:25
+tempo medio bubble_sort: 4.39118e-06
+tempo medio insertion_sort: 1.12187e-06
+tempo medio selection_sort: 2.38351e-06
+tempo medio merge_sort: 4.93711e-06
+tempo medio quick_sort: 1.37043e-06
+tempo medio std::sort: 2.04518e-06
+tempo medio quick_modificato 1.34228e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 25
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 25
+dimensione:26
+tempo medio bubble_sort: 4.39909e-06
+tempo medio insertion_sort: 1.22848e-06
+tempo medio selection_sort: 2.36977e-06
+tempo medio merge_sort: 4.98148e-06
+tempo medio quick_sort: 1.48095e-06
+tempo medio std::sort: 2.14154e-06
+tempo medio quick_modificato 1.42493e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 26
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 26
+dimensione:27
+tempo medio bubble_sort: 4.62558e-06
+tempo medio insertion_sort: 1.28073e-06
+tempo medio selection_sort: 2.66737e-06
+tempo medio merge_sort: 5.35314e-06
+tempo medio quick_sort: 1.46136e-06
+tempo medio std::sort: 2.23642e-06
+tempo medio quick_modificato 1.57421e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 27
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 27
+dimensione:28
+tempo medio bubble_sort: 4.76372e-06
+tempo medio insertion_sort: 1.32868e-06
+tempo medio selection_sort: 2.66656e-06
+tempo medio merge_sort: 5.39094e-06
+tempo medio quick_sort: 1.55723e-06
+tempo medio std::sort: 2.3601e-06
+tempo medio quick_modificato 1.75944e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 28
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 28
+dimensione:29
+tempo medio bubble_sort: 5.79876e-06
+tempo medio insertion_sort: 3.1239e-06
+tempo medio selection_sort: 5.51981e-06
+tempo medio merge_sort: 7.79377e-06
+tempo medio quick_sort: 1.6175e-06
+tempo medio std::sort: 2.4237e-06
+tempo medio quick_modificato 1.63263e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 29
+dimensione:30
+tempo medio bubble_sort: 5.62533e-06
+tempo medio insertion_sort: 1.64849e-06
+tempo medio selection_sort: 2.98965e-06
+tempo medio merge_sort: 6.11194e-06
+tempo medio quick_sort: 1.93208e-06
+tempo medio std::sort: 2.52723e-06
+tempo medio quick_modificato 1.80417e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 30
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 30
+dimensione:31
+tempo medio bubble_sort: 5.95339e-06
+tempo medio insertion_sort: 1.63747e-06
+tempo medio selection_sort: 3.2019e-06
+tempo medio merge_sort: 6.32385e-06
+tempo medio quick_sort: 1.84187e-06
+tempo medio std::sort: 2.69341e-06
+tempo medio quick_modificato 1.77807e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 31
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 31
+dimensione:32
+tempo medio bubble_sort: 6.35687e-06
+tempo medio insertion_sort: 1.7266e-06
+tempo medio selection_sort: 3.29646e-06
+tempo medio merge_sort: 6.70435e-06
+tempo medio quick_sort: 1.83902e-06
+tempo medio std::sort: 2.75058e-06
+tempo medio quick_modificato 1.81967e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 32
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 32
+dimensione:33
+tempo medio bubble_sort: 6.9288e-06
+tempo medio insertion_sort: 1.73903e-06
+tempo medio selection_sort: 3.77848e-06
+tempo medio merge_sort: 6.77038e-06
+tempo medio quick_sort: 2.27793e-06
+tempo medio std::sort: 2.88915e-06
+tempo medio quick_modificato 2.22911e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 33
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 33
+dimensione:34
+tempo medio bubble_sort: 7.77873e-06
+tempo medio insertion_sort: 1.80582e-06
+tempo medio selection_sort: 4.24528e-06
+tempo medio merge_sort: 7.41094e-06
+tempo medio quick_sort: 2.29339e-06
+tempo medio std::sort: 3.01161e-06
+tempo medio quick_modificato 2.29932e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 34
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 34
+dimensione:35
+tempo medio bubble_sort: 8.14812e-06
+tempo medio insertion_sort: 3.19735e-06
+tempo medio selection_sort: 6.82988e-06
+tempo medio merge_sort: 1.06601e-05
+tempo medio quick_sort: 2.23736e-06
+tempo medio std::sort: 3.52807e-06
+tempo medio quick_modificato 2.23195e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 35
+dimensione:36
+tempo medio bubble_sort: 7.75383e-06
+tempo medio insertion_sort: 2.17939e-06
+tempo medio selection_sort: 4.01488e-06
+tempo medio merge_sort: 7.37743e-06
+tempo medio quick_sort: 2.1655e-06
+tempo medio std::sort: 3.33738e-06
+tempo medio quick_modificato 2.31748e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 36
+dimensione:37
+tempo medio bubble_sort: 8.5604e-06
+tempo medio insertion_sort: 2.06349e-06
+tempo medio selection_sort: 4.48924e-06
+tempo medio merge_sort: 8.5931e-06
+tempo medio quick_sort: 2.23855e-06
+tempo medio std::sort: 3.36225e-06
+tempo medio quick_modificato 2.2542e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 37
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 37
+dimensione:38
+tempo medio bubble_sort: 1.03741e-05
+tempo medio insertion_sort: 2.28819e-06
+tempo medio selection_sort: 6.42304e-06
+tempo medio merge_sort: 8.31645e-06
+tempo medio quick_sort: 2.34798e-06
+tempo medio std::sort: 3.68545e-06
+tempo medio quick_modificato 2.30726e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 38
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 38
+dimensione:39
+tempo medio bubble_sort: 9.52146e-06
+tempo medio insertion_sort: 2.29664e-06
+tempo medio selection_sort: 5.64671e-06
+tempo medio merge_sort: 9.90835e-06
+tempo medio quick_sort: 3.18773e-06
+tempo medio std::sort: 4.90473e-06
+tempo medio quick_modificato 4.53358e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 39
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 39
+dimensione:40
+tempo medio bubble_sort: 1.4608e-05
+tempo medio insertion_sort: 4.2371e-06
+tempo medio selection_sort: 1.54369e-05
+tempo medio merge_sort: 1.18334e-05
+tempo medio quick_sort: 2.50981e-06
+tempo medio std::sort: 4.56805e-06
+tempo medio quick_modificato 2.49178e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 40
+dimensione:41
+tempo medio bubble_sort: 1.48213e-05
+tempo medio insertion_sort: 2.75406e-06
+tempo medio selection_sort: 5.8162e-06
+tempo medio merge_sort: 9.39188e-06
+tempo medio quick_sort: 2.76456e-06
+tempo medio std::sort: 3.75372e-06
+tempo medio quick_modificato 2.89738e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 41
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 41
+dimensione:42
+tempo medio bubble_sort: 1.11038e-05
+tempo medio insertion_sort: 2.67012e-06
+tempo medio selection_sort: 5.58363e-06
+tempo medio merge_sort: 9.85373e-06
+tempo medio quick_sort: 2.57148e-06
+tempo medio std::sort: 4.15047e-06
+tempo medio quick_modificato 2.93949e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 42
+dimensione:43
+tempo medio bubble_sort: 1.73762e-05
+tempo medio insertion_sort: 5.1058e-06
+tempo medio selection_sort: 9.68015e-06
+tempo medio merge_sort: 9.74954e-06
+tempo medio quick_sort: 2.67317e-06
+tempo medio std::sort: 4.17849e-06
+tempo medio quick_modificato 3.04541e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 43
+dimensione:44
+tempo medio bubble_sort: 1.26161e-05
+tempo medio insertion_sort: 3.60189e-06
+tempo medio selection_sort: 6.30989e-06
+tempo medio merge_sort: 9.42837e-06
+tempo medio quick_sort: 2.84829e-06
+tempo medio std::sort: 4.06675e-06
+tempo medio quick_modificato 2.75228e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 44
+dimensione:45
+tempo medio bubble_sort: 1.19956e-05
+tempo medio insertion_sort: 2.84656e-06
+tempo medio selection_sort: 6.25455e-06
+tempo medio merge_sort: 9.7092e-06
+tempo medio quick_sort: 2.82544e-06
+tempo medio std::sort: 4.19009e-06
+tempo medio quick_modificato 2.83017e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 45
+dimensione:46
+tempo medio bubble_sort: 1.24455e-05
+tempo medio insertion_sort: 2.95933e-06
+tempo medio selection_sort: 7.23117e-06
+tempo medio merge_sort: 1.08265e-05
+tempo medio quick_sort: 4.19256e-06
+tempo medio std::sort: 5.74525e-06
+tempo medio quick_modificato 3.94137e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 46
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 46
+dimensione:47
+tempo medio bubble_sort: 1.30981e-05
+tempo medio insertion_sort: 3.00327e-06
+tempo medio selection_sort: 6.5906e-06
+tempo medio merge_sort: 1.02859e-05
+tempo medio quick_sort: 2.99531e-06
+tempo medio std::sort: 4.57411e-06
+tempo medio quick_modificato 3.07225e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 47
+dimensione:48
+tempo medio bubble_sort: 1.34093e-05
+tempo medio insertion_sort: 3.15808e-06
+tempo medio selection_sort: 7.28734e-06
+tempo medio merge_sort: 1.00588e-05
+tempo medio quick_sort: 3.04659e-06
+tempo medio std::sort: 4.63831e-06
+tempo medio quick_modificato 3.1332e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 48
+dimensione:49
+tempo medio bubble_sort: 1.38155e-05
+tempo medio insertion_sort: 3.34075e-06
+tempo medio selection_sort: 7.07382e-06
+tempo medio merge_sort: 1.0651e-05
+tempo medio quick_sort: 3.27818e-06
+tempo medio std::sort: 5.23449e-06
+tempo medio quick_modificato 3.15816e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 49
+dimensione:50
+tempo medio bubble_sort: 1.77252e-05
+tempo medio insertion_sort: 3.78271e-06
+tempo medio selection_sort: 7.63384e-06
+tempo medio merge_sort: 1.12359e-05
+tempo medio quick_sort: 3.28339e-06
+tempo medio std::sort: 5.06081e-06
+tempo medio quick_modificato 3.31214e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 50
+dimensione:51
+tempo medio bubble_sort: 1.48081e-05
+tempo medio insertion_sort: 3.46689e-06
+tempo medio selection_sort: 8.80346e-06
+tempo medio merge_sort: 1.15063e-05
+tempo medio quick_sort: 3.30625e-06
+tempo medio std::sort: 4.88122e-06
+tempo medio quick_modificato 3.34963e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 51
+dimensione:52
+tempo medio bubble_sort: 1.53775e-05
+tempo medio insertion_sort: 3.79258e-06
+tempo medio selection_sort: 7.51275e-06
+tempo medio merge_sort: 1.13793e-05
+tempo medio quick_sort: 3.32434e-06
+tempo medio std::sort: 4.93168e-06
+tempo medio quick_modificato 3.39435e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 52
+dimensione:53
+tempo medio bubble_sort: 1.83376e-05
+tempo medio insertion_sort: 4.22312e-06
+tempo medio selection_sort: 8.7029e-06
+tempo medio merge_sort: 1.2608e-05
+tempo medio quick_sort: 3.79605e-06
+tempo medio std::sort: 5.17084e-06
+tempo medio quick_modificato 3.5392e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 53
+dimensione:54
+tempo medio bubble_sort: 1.67304e-05
+tempo medio insertion_sort: 3.94617e-06
+tempo medio selection_sort: 8.61601e-06
+tempo medio merge_sort: 1.18561e-05
+tempo medio quick_sort: 3.50497e-06
+tempo medio std::sort: 5.33791e-06
+tempo medio quick_modificato 3.64624e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 54
+dimensione:55
+tempo medio bubble_sort: 1.72919e-05
+tempo medio insertion_sort: 4.02295e-06
+tempo medio selection_sort: 8.6375e-06
+tempo medio merge_sort: 1.14697e-05
+tempo medio quick_sort: 3.60223e-06
+tempo medio std::sort: 5.88881e-06
+tempo medio quick_modificato 3.90951e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 55
+dimensione:56
+tempo medio bubble_sort: 2.29552e-05
+tempo medio insertion_sort: 4.59241e-06
+tempo medio selection_sort: 9.01919e-06
+tempo medio merge_sort: 1.18426e-05
+tempo medio quick_sort: 3.68425e-06
+tempo medio std::sort: 5.64929e-06
+tempo medio quick_modificato 4.01408e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 56
+dimensione:57
+tempo medio bubble_sort: 1.84578e-05
+tempo medio insertion_sort: 4.19547e-06
+tempo medio selection_sort: 9.2084e-06
+tempo medio merge_sort: 1.20676e-05
+tempo medio quick_sort: 3.84366e-06
+tempo medio std::sort: 5.71358e-06
+tempo medio quick_modificato 3.86576e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 57
+dimensione:58
+tempo medio bubble_sort: 1.87929e-05
+tempo medio insertion_sort: 4.45957e-06
+tempo medio selection_sort: 9.47804e-06
+tempo medio merge_sort: 1.42165e-05
+tempo medio quick_sort: 4.19287e-06
+tempo medio std::sort: 6.22726e-06
+tempo medio quick_modificato 4.22499e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 58
+dimensione:59
+tempo medio bubble_sort: 1.99538e-05
+tempo medio insertion_sort: 4.52959e-06
+tempo medio selection_sort: 9.94395e-06
+tempo medio merge_sort: 1.33261e-05
+tempo medio quick_sort: 3.9184e-06
+tempo medio std::sort: 6.54863e-06
+tempo medio quick_modificato 4.23272e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 59
+dimensione:60
+tempo medio bubble_sort: 2.01119e-05
+tempo medio insertion_sort: 4.70468e-06
+tempo medio selection_sort: 1.03486e-05
+tempo medio merge_sort: 1.34802e-05
+tempo medio quick_sort: 4.15626e-06
+tempo medio std::sort: 6.11686e-06
+tempo medio quick_modificato 4.09881e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 60
+dimensione:61
+tempo medio bubble_sort: 2.95132e-05
+tempo medio insertion_sort: 5.58147e-06
+tempo medio selection_sort: 1.16e-05
+tempo medio merge_sort: 1.3649e-05
+tempo medio quick_sort: 4.23532e-06
+tempo medio std::sort: 6.13033e-06
+tempo medio quick_modificato 4.17849e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 61
+dimensione:62
+tempo medio bubble_sort: 2.1461e-05
+tempo medio insertion_sort: 5.05597e-06
+tempo medio selection_sort: 1.0559e-05
+tempo medio merge_sort: 1.3998e-05
+tempo medio quick_sort: 4.14968e-06
+tempo medio std::sort: 6.36568e-06
+tempo medio quick_modificato 4.39293e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 62
+dimensione:63
+tempo medio bubble_sort: 2.25841e-05
+tempo medio insertion_sort: 4.93679e-06
+tempo medio selection_sort: 1.11307e-05
+tempo medio merge_sort: 1.6038e-05
+tempo medio quick_sort: 4.40153e-06
+tempo medio std::sort: 6.28377e-06
+tempo medio quick_modificato 4.22294e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 63
+dimensione:64
+tempo medio bubble_sort: 2.24554e-05
+tempo medio insertion_sort: 5.17735e-06
+tempo medio selection_sort: 1.16847e-05
+tempo medio merge_sort: 1.38067e-05
+tempo medio quick_sort: 4.48982e-06
+tempo medio std::sort: 6.42558e-06
+tempo medio quick_modificato 4.36706e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 64
+dimensione:65
+tempo medio bubble_sort: 2.35497e-05
+tempo medio insertion_sort: 5.2537e-06
+tempo medio selection_sort: 1.0862e-05
+tempo medio merge_sort: 1.52339e-05
+tempo medio quick_sort: 4.70886e-06
+tempo medio std::sort: 7.21627e-06
+tempo medio quick_modificato 5.36008e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 65
+dimensione:66
+tempo medio bubble_sort: 2.34406e-05
+tempo medio insertion_sort: 5.58084e-06
+tempo medio selection_sort: 1.11436e-05
+tempo medio merge_sort: 1.42327e-05
+tempo medio quick_sort: 4.6116e-06
+tempo medio std::sort: 6.79717e-06
+tempo medio quick_modificato 4.57266e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 66
+dimensione:67
+tempo medio bubble_sort: 2.52674e-05
+tempo medio insertion_sort: 5.66838e-06
+tempo medio selection_sort: 1.13647e-05
+tempo medio merge_sort: 1.57635e-05
+tempo medio quick_sort: 5.10183e-06
+tempo medio std::sort: 6.95622e-06
+tempo medio quick_modificato 4.87238e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 67
+dimensione:68
+tempo medio bubble_sort: 2.58838e-05
+tempo medio insertion_sort: 5.85311e-06
+tempo medio selection_sort: 1.25471e-05
+tempo medio merge_sort: 1.49398e-05
+tempo medio quick_sort: 4.74975e-06
+tempo medio std::sort: 6.99506e-06
+tempo medio quick_modificato 4.75622e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 68
+dimensione:69
+tempo medio bubble_sort: 2.55804e-05
+tempo medio insertion_sort: 5.97734e-06
+tempo medio selection_sort: 1.20824e-05
+tempo medio merge_sort: 1.51568e-05
+tempo medio quick_sort: 4.92628e-06
+tempo medio std::sort: 7.64074e-06
+tempo medio quick_modificato 4.98575e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 69
+dimensione:70
+tempo medio bubble_sort: 3.0629e-05
+tempo medio insertion_sort: 5.96065e-06
+tempo medio selection_sort: 1.2784e-05
+tempo medio merge_sort: 1.60937e-05
+tempo medio quick_sort: 5.11668e-06
+tempo medio std::sort: 7.02651e-06
+tempo medio quick_modificato 4.96613e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 70
+dimensione:71
+tempo medio bubble_sort: 3.13579e-05
+tempo medio insertion_sort: 6.12526e-06
+tempo medio selection_sort: 1.26067e-05
+tempo medio merge_sort: 1.5684e-05
+tempo medio quick_sort: 6.53228e-06
+tempo medio std::sort: 1.14581e-05
+tempo medio quick_modificato 5.64349e-06
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 71
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 71
+dimensione:72
+tempo medio bubble_sort: 2.85684e-05
+tempo medio insertion_sort: 6.2926e-06
+tempo medio selection_sort: 1.33831e-05
+tempo medio merge_sort: 1.6018e-05
+tempo medio quick_sort: 5.3303e-06
+tempo medio std::sort: 7.34084e-06
+tempo medio quick_modificato 5.27191e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 72
+dimensione:73
+tempo medio bubble_sort: 2.92044e-05
+tempo medio insertion_sort: 6.66843e-06
+tempo medio selection_sort: 1.3534e-05
+tempo medio merge_sort: 2.07658e-05
+tempo medio quick_sort: 5.79646e-06
+tempo medio std::sort: 7.90585e-06
+tempo medio quick_modificato 5.56831e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 73
+dimensione:74
+tempo medio bubble_sort: 3.05275e-05
+tempo medio insertion_sort: 6.64786e-06
+tempo medio selection_sort: 1.36622e-05
+tempo medio merge_sort: 1.71155e-05
+tempo medio quick_sort: 5.34639e-06
+tempo medio std::sort: 7.79451e-06
+tempo medio quick_modificato 5.83093e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 74
+dimensione:75
+tempo medio bubble_sort: 3.2148e-05
+tempo medio insertion_sort: 7.73753e-06
+tempo medio selection_sort: 1.37839e-05
+tempo medio merge_sort: 1.86782e-05
+tempo medio quick_sort: 5.43525e-06
+tempo medio std::sort: 7.67622e-06
+tempo medio quick_modificato 5.36869e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 75
+dimensione:76
+tempo medio bubble_sort: 3.34514e-05
+tempo medio insertion_sort: 7.09048e-06
+tempo medio selection_sort: 1.4704e-05
+tempo medio merge_sort: 1.72153e-05
+tempo medio quick_sort: 5.52868e-06
+tempo medio std::sort: 7.85226e-06
+tempo medio quick_modificato 5.59426e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 76
+dimensione:77
+tempo medio bubble_sort: 4.096e-05
+tempo medio insertion_sort: 7.52341e-06
+tempo medio selection_sort: 1.69515e-05
+tempo medio merge_sort: 1.7359e-05
+tempo medio quick_sort: 5.58372e-06
+tempo medio std::sort: 7.97655e-06
+tempo medio quick_modificato 5.83513e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 77
+dimensione:78
+tempo medio bubble_sort: 3.22282e-05
+tempo medio insertion_sort: 7.15388e-06
+tempo medio selection_sort: 2.1296e-05
+tempo medio merge_sort: 3.08332e-05
+tempo medio quick_sort: 5.89434e-06
+tempo medio std::sort: 8.91649e-06
+tempo medio quick_modificato 1.05355e-05
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 78
+dimensione:79
+tempo medio bubble_sort: 4.44804e-05
+tempo medio insertion_sort: 7.63282e-06
+tempo medio selection_sort: 1.66203e-05
+tempo medio merge_sort: 1.90143e-05
+tempo medio quick_sort: 6.16959e-06
+tempo medio std::sort: 8.79625e-06
+tempo medio quick_modificato 5.96716e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 79
+dimensione:80
+tempo medio bubble_sort: 4.44974e-05
+tempo medio insertion_sort: 1.60525e-05
+tempo medio selection_sort: 1.58781e-05
+tempo medio merge_sort: 1.83051e-05
+tempo medio quick_sort: 6.01969e-06
+tempo medio std::sort: 8.33904e-06
+tempo medio quick_modificato 5.93002e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 80
+dimensione:81
+tempo medio bubble_sort: 3.46416e-05
+tempo medio insertion_sort: 7.86104e-06
+tempo medio selection_sort: 1.76515e-05
+tempo medio merge_sort: 2.25708e-05
+tempo medio quick_sort: 7.70712e-06
+tempo medio std::sort: 1.0652e-05
+tempo medio quick_modificato 8.26245e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 81
+dimensione:82
+tempo medio bubble_sort: 4.02757e-05
+tempo medio insertion_sort: 9.16932e-06
+tempo medio selection_sort: 1.71259e-05
+tempo medio merge_sort: 2.03592e-05
+tempo medio quick_sort: 6.66397e-06
+tempo medio std::sort: 9.95112e-06
+tempo medio quick_modificato 6.59449e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 82
+dimensione:83
+tempo medio bubble_sort: 4.90149e-05
+tempo medio insertion_sort: 1.04104e-05
+tempo medio selection_sort: 1.78549e-05
+tempo medio merge_sort: 2.3568e-05
+tempo medio quick_sort: 6.49979e-06
+tempo medio std::sort: 9.77539e-06
+tempo medio quick_modificato 8.38641e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 83
+dimensione:84
+tempo medio bubble_sort: 4.86453e-05
+tempo medio insertion_sort: 9.23957e-06
+tempo medio selection_sort: 2.23501e-05
+tempo medio merge_sort: 2.84763e-05
+tempo medio quick_sort: 9.4451e-06
+tempo medio std::sort: 1.82894e-05
+tempo medio quick_modificato 1.42314e-05
+gli algoritmi quadratici sono più veloci del quick sort per dimensiione: 84
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 84
+dimensione:85
+tempo medio bubble_sort: 5.56497e-05
+tempo medio insertion_sort: 1.14683e-05
+tempo medio selection_sort: 2.31334e-05
+tempo medio merge_sort: 2.9015e-05
+tempo medio quick_sort: 1.0389e-05
+tempo medio std::sort: 1.48828e-05
+tempo medio quick_modificato 9.34468e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 85
+dimensione:86
+tempo medio bubble_sort: 5.54552e-05
+tempo medio insertion_sort: 1.19412e-05
+tempo medio selection_sort: 2.18876e-05
+tempo medio merge_sort: 2.06799e-05
+tempo medio quick_sort: 6.79584e-06
+tempo medio std::sort: 9.23701e-06
+tempo medio quick_modificato 7.20933e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 86
+dimensione:87
+tempo medio bubble_sort: 4.04988e-05
+tempo medio insertion_sort: 8.87281e-06
+tempo medio selection_sort: 2.2591e-05
+tempo medio merge_sort: 2.0945e-05
+tempo medio quick_sort: 6.60834e-06
+tempo medio std::sort: 9.33189e-06
+tempo medio quick_modificato 6.73604e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 87
+dimensione:88
+tempo medio bubble_sort: 4.19008e-05
+tempo medio insertion_sort: 8.94872e-06
+tempo medio selection_sort: 1.84502e-05
+tempo medio merge_sort: 2.04872e-05
+tempo medio quick_sort: 6.63333e-06
+tempo medio std::sort: 1.04063e-05
+tempo medio quick_modificato 6.73803e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 88
+dimensione:89
+tempo medio bubble_sort: 4.15712e-05
+tempo medio insertion_sort: 9.17295e-06
+tempo medio selection_sort: 1.95995e-05
+tempo medio merge_sort: 1.99118e-05
+tempo medio quick_sort: 6.75032e-06
+tempo medio std::sort: 9.6163e-06
+tempo medio quick_modificato 6.59474e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 89
+dimensione:90
+tempo medio bubble_sort: 4.31025e-05
+tempo medio insertion_sort: 9.71216e-06
+tempo medio selection_sort: 2.04139e-05
+tempo medio merge_sort: 2.08527e-05
+tempo medio quick_sort: 6.79412e-06
+tempo medio std::sort: 9.55899e-06
+tempo medio quick_modificato 6.84071e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 90
+dimensione:91
+tempo medio bubble_sort: 4.27827e-05
+tempo medio insertion_sort: 1.01038e-05
+tempo medio selection_sort: 2.06371e-05
+tempo medio merge_sort: 2.25273e-05
+tempo medio quick_sort: 7.24205e-06
+tempo medio std::sort: 9.72859e-06
+tempo medio quick_modificato 6.9237e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 91
+dimensione:92
+tempo medio bubble_sort: 4.53911e-05
+tempo medio insertion_sort: 9.90347e-06
+tempo medio selection_sort: 1.99648e-05
+tempo medio merge_sort: 2.0716e-05
+tempo medio quick_sort: 7.13549e-06
+tempo medio std::sort: 9.951e-06
+tempo medio quick_modificato 7.77084e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 92
+dimensione:93
+tempo medio bubble_sort: 4.67154e-05
+tempo medio insertion_sort: 9.88916e-06
+tempo medio selection_sort: 2.07051e-05
+tempo medio merge_sort: 2.24062e-05
+tempo medio quick_sort: 7.20687e-06
+tempo medio std::sort: 9.92829e-06
+tempo medio quick_modificato 7.16375e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 93
+dimensione:94
+tempo medio bubble_sort: 5.15719e-05
+tempo medio insertion_sort: 1.04853e-05
+tempo medio selection_sort: 2.10885e-05
+tempo medio merge_sort: 2.27304e-05
+tempo medio quick_sort: 7.06621e-06
+tempo medio std::sort: 1.03231e-05
+tempo medio quick_modificato 7.14954e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 94
+dimensione:95
+tempo medio bubble_sort: 4.61523e-05
+tempo medio insertion_sort: 1.02249e-05
+tempo medio selection_sort: 2.70354e-05
+tempo medio merge_sort: 2.42202e-05
+tempo medio quick_sort: 7.4901e-06
+tempo medio std::sort: 1.0341e-05
+tempo medio quick_modificato 7.16e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 95
+dimensione:96
+tempo medio bubble_sort: 4.88307e-05
+tempo medio insertion_sort: 1.08585e-05
+tempo medio selection_sort: 2.31147e-05
+tempo medio merge_sort: 3.1358e-05
+tempo medio quick_sort: 8.23719e-06
+tempo medio std::sort: 1.0514e-05
+tempo medio quick_modificato 7.3977e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 96
+dimensione:97
+tempo medio bubble_sort: 5.48329e-05
+tempo medio insertion_sort: 1.11048e-05
+tempo medio selection_sort: 2.35722e-05
+tempo medio merge_sort: 2.34966e-05
+tempo medio quick_sort: 8.57403e-06
+tempo medio std::sort: 1.42581e-05
+tempo medio quick_modificato 8.16332e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 97
+dimensione:98
+tempo medio bubble_sort: 5.16723e-05
+tempo medio insertion_sort: 1.10085e-05
+tempo medio selection_sort: 2.27591e-05
+tempo medio merge_sort: 2.18738e-05
+tempo medio quick_sort: 7.52622e-06
+tempo medio std::sort: 1.05232e-05
+tempo medio quick_modificato 9.67308e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 98
+dimensione:99
+tempo medio bubble_sort: 6.632e-05
+tempo medio insertion_sort: 1.15357e-05
+tempo medio selection_sort: 2.44046e-05
+tempo medio merge_sort: 2.37362e-05
+tempo medio quick_sort: 7.6025e-06
+tempo medio std::sort: 1.08789e-05
+tempo medio quick_modificato 7.6897e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 99
+dimensione:100
+tempo medio bubble_sort: 6.32324e-05
+tempo medio insertion_sort: 1.16337e-05
+tempo medio selection_sort: 2.4494e-05
+tempo medio merge_sort: 2.40879e-05
+tempo medio quick_sort: 7.74689e-06
+tempo medio std::sort: 1.08877e-05
+tempo medio quick_modificato 7.92281e-06
+gli algoritmi quadratici sono più veloci del merge sort per dimensione: 100
+la soglia è: 16
